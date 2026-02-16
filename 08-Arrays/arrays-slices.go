@@ -70,4 +70,25 @@ func main() {
 	fmt.Println(slice2)
 	fmt.Println(array6)
 
+	// Arrays Internos
+	fmt.Print("--------Arrays Internos -----------\n")
+	//o make é uma função que aloca e inicializa um array interno para o slice, e retorna um slice que aponta para esse array
+	//no make o primeiro parâmetro é o tipo do slice, o segundo é o tamanho do slice e o terceiro é a capacidade do slice
+	slice3 := make([]float64, 10, 15)
+	fmt.Println(slice3)
+	fmt.Println(len(slice3)) // length do slice
+	fmt.Println(cap(slice3)) // capacidade do slice
+
+	slice3 = append(slice3, 30)
+	slice3 = append(slice3, 40)
+	fmt.Println(slice3)
+	fmt.Println(len(slice3)) // length do slice
+	fmt.Println(cap(slice3)) // capacidade do slice
+
+	slice4 := make([]float32, 5)
+	fmt.Println(slice4)
+	slice4 = append(slice4, 10)
+	fmt.Println(len(slice4)) // length do slice
+	fmt.Println(cap(slice4)) // capacidade do slice
+
 }
