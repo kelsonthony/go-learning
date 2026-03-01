@@ -18,3 +18,24 @@ go get github.com/urfave/cli
 	//Goroutines são funções ou métodos que são executados concorrentemente com outras goroutines. Elas são leves e eficientes, permitindo que você crie milhares ou até milhões de goroutines sem esgotar os recursos do sistema.
 
 	//Para criar uma goroutine, basta usar a palavra-chave "go" seguida da chamada da função ou método que você deseja executar concorrentemente. Por exemplo:
+
+
+criar pacotes 
+
+go mod init introducao-testes
+rodar os testes na pasta raiz do projeto 
+go test ./... 
+
+Com -V modo verboso
+❯ go test -v
+
+go test --cover para checar a porcentagem da cobertura de testes
+
+❯ go test --coverprofile cobertura.txt
+
+❯ go tool cover --func=cobertura.txt
+introducao-testes/enderecos/enderecos.go:6:     TipoEndereco    100.0%
+total:                                          (statements)    100.0%
+(base) 
+
+❯ go tool cover --html=cobertura.txt
